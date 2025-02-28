@@ -13,7 +13,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="bg-gray-800 text-white w-64 min-h-screen hidden lg:block">
+    <aside className="bg-gray-800 text-white w-96 min-h-screen hidden lg:block">
       <div className="p-4">
         <Link to="/" className="flex items-center space-x-2 mb-6">
           <Shield size={24} />

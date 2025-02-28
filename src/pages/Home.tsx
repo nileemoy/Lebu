@@ -7,7 +7,7 @@ import Card from '../components/common/Card';
 const Home: React.FC = () => {
   return (
     <div>
-      <section className="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white py-16 rounded-lg mb-10">
+      <section className=" border-dashed border-black border-2 bg-gradient-to-b from-indigo-100 to-white py-16 rounded-lg mb-10">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Detect Fake News and Deepfakes

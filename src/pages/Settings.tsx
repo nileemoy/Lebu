@@ -490,7 +490,7 @@ const Settings = () => {
           
           {activeTab === 'about' && (
             <Card>
-              <h2 className="text-xl font-semibold mb-4">About Truth Guardian</h2>
+              <h2 className="text-xl font-semibold mb-4">About VigilAi</h2>
               
               <div className="space-y-6">
                 <div>
@@ -502,7 +502,7 @@ const Settings = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-2">Technology</h3>
                   <p className="text-gray-600 mb-2">
-                    Truth Guardian uses advanced AI models to detect fake news, deepfakes, and misinformation:
+                    VigilAi uses advanced AI models to detect fake news, deepfakes, and misinformation:
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2">
                     <li>Text analysis powered by Perplexity and OpenAI</li>

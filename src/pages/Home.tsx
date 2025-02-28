@@ -13,7 +13,7 @@ const Home: React.FC = () => {
             Detect Fake News and Deepfakes
           </h1>
           <p className="text-xl max-w-2xl mx-auto mb-8">
-            Truth Guardian helps you verify the authenticity of online content using AI-powered analysis
+            VigilAi helps you verify the authenticity of online content using AI-powered analysis
           </p>
           <Link to="/analyze">
             <Button  size="lg" className="bg-black text-indigo-700 hover:bg-gray-100">
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
         <div className="bg-gray-100 rounded-lg p-8">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
-              <h2 className="text-2xl font-bold mb-4">Why Truth Guardian?</h2>
+              <h2 className="text-2xl font-bold mb-4">Why VigilAi?</h2>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="bg-green-100 rounded-full p-1 mr-3 mt-1">
@@ -172,7 +172,7 @@ const Home: React.FC = () => {
             <div className="md:w-1/3">
               <img
                 src="/api/placeholder/400/250"
-                alt="Truth Guardian Dashboard"
+                alt="VigilAi Dashboard"
                 className="rounded-lg shadow-md"
               />
             </div>

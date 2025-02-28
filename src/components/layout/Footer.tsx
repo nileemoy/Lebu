@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <Shield size={20} />
-            <span className="text-lg font-semibold">Truth Guardian</span>
+            <span className="text-lg font-semibold">VigilAi</span>
           </div>
           
           <div className="text-sm text-gray-400">
@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           
           <div className="mt-4 md:mt-0 text-sm">
-            &copy; {new Date().getFullYear()} Truth Guardian
+            &copy; {new Date().getFullYear()} VigilAi
           </div>
         </div>
       </div>

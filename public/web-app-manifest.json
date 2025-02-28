@@ -1,6 +1,6 @@
 {
-    "short_name": "Truth Guardian",
-    "name": "Truth Guardian - Detect Fake News and Misinformation",
+    "short_name": "VigilAi",
+    "name": "VigilAi - Detect Fake News and Misinformation",
     "icons": [
       {
         "src": "favicon.ico",
@@ -72,7 +72,7 @@
         "sizes": "1280x720",
         "type": "image/png",
         "form_factor": "wide",
-        "label": "Truth Guardian dashboard"
+        "label": "VigilAi dashboard"
       },
       {
         "src": "screenshots/screenshot2.png",

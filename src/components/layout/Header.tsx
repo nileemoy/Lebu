@@ -29,7 +29,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <Shield size={24} />
-            <span className="text-xl font-bold">Truth Guardian</span>
+            <span className="text-xl font-bold">VigilAi</span>
           </Link>
 
           {/* Desktop Navigation */}

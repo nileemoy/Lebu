@@ -17,7 +17,7 @@ const Sidebar = () => {
       <div className="p-4">
         <Link to="/" className="flex items-center space-x-2 mb-6">
           <Shield size={24} />
-          <span className="text-xl font-bold">Truth Guardian</span>
+          <span className="text-xl font-bold">VigilAi</span>
         </Link>
         
         <nav className="space-y-2">

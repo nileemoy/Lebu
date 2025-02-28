@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "vigilAI",
+    "version": "1.0",
+    "description": "Analyzes websites for misinformation and provides credibility scores",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "*://*/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.jpeg"
+      }
+    },
+    "icons": {
+      "16": "icons/icon16.jpeg"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }

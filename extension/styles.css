@@ -1,0 +1,370 @@
+/* styles.css */
+.truth-detector-badge {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .truth-detector-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .truth-detector-icon {
+    width: 24px;
+    height: 24px;
+    color: #333;
+  }
+  
+  .truth-detector-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Different states */
+  .truth-detector-analyzing {
+    background-color: #e5e7eb;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .truth-detector-high {
+    background-color: #ecfdf5;
+    border: 2px solid #10b981;
+  }
+  
+  .truth-detector-high .truth-detector-score {
+    color: #10b981;
+  }
+  
+  .truth-detector-medium {
+    background-color: #fffbeb;
+    border: 2px solid #f59e0b;
+  }
+  
+  .truth-detector-medium .truth-detector-score {
+    color: #f59e0b;
+  }
+  
+  .truth-detector-low {
+    background-color: #fef2f2;
+    border: 2px solid #ef4444;
+  }
+  
+  .truth-detector-low .truth-detector-score {
+    color: #ef4444;
+  }
+  
+  .truth-detector-very-low {
+    background-color: #ef4444;
+    border: 2px solid #b91c1c;
+  }
+  
+  .truth-detector-very-low .truth-detector-score {
+    color: white;
+  }
+  
+  .truth-detector-error {
+    background-color: #f9fafb;
+    border: 2px solid #6b7280;
+  }
+  
+  .truth-detector-error .truth-detector-score {
+    color: #6b7280;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Details panel */
+  .truth-detector-details {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 320px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9998;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .truth-detector-hidden {
+    display: none;
+  }
+  
+  .truth-detector-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .truth-detector-details-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #111827;
+  }
+  
+  .truth-detector-close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #6b7280;
+    cursor: pointer;
+  }
+  
+  .truth-detector-details-content {
+    padding: 15px;
+  }
+  
+  .truth-detector-result-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .truth-detector-high {
+    background-color: #ecfdf5;
+  }
+  
+  .truth-detector-medium {
+    background-color: #fffbeb;
+  }
+  
+  .truth-detector-low {
+    background-color: #fef2f2;
+  }
+  
+  .truth-detector-very-low {
+    background-color: #fee2e2;
+  }
+  
+  .truth-detector-big-score {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .truth-detector-high .truth-detector-big-score {
+    color: #10b981;
+  }
+  
+  .truth-detector-medium .truth-detector-big-score {
+    color: #f59e0b;
+  }
+  
+  .truth-detector-low .truth-detector-big-score, 
+  .truth-detector-very-low .truth-detector-big-score {
+    color: #ef4444;
+  }
+  
+  .truth-detector-verdict {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .truth-detector-factors {
+    margin-bottom: 20px;
+  }
+  
+  .truth-detector-factors h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #111827;
+  }
+  
+  .truth-detector-factors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .truth-detector-factors li {
+    margin-bottom: 10px;
+  }
+  
+  .factor-name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .factor-bar-container {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .factor-bar {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .factor-high {
+    background-color: #10b981;
+  }
+  
+  .factor-medium {
+    background-color: #f59e0b;
+  }
+  
+  .factor-low {
+    background-color: #ef4444;
+  }
+  
+  .factor-score {
+    position: absolute;
+    right: 5px;
+    top: -18px;
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
+  .truth-detector-summary {
+    margin-bottom: 20px;
+  }
+  
+  .truth-detector-summary h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #111827;
+  }
+  
+  .truth-detector-summary p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #374151;
+  }
+  
+  .truth-detector-warning {
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .truth-detector-warning h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #b91c1c;
+  }
+  
+  .truth-detector-warning p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #7f1d1d;
+  }
+  
+  .truth-detector-warning p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .truth-detector-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    color: #6b7280;
+    font-size: 16px;
+  }
+  
+  .truth-detector-loading:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .truth-detector-error-message {
+    text-align: center;
+    padding: 20px;
+    color: #b91c1c;
+  }
+  
+  .truth-detector-error-message h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+  
+  .truth-detector-error-message p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+  }
+  
+  .truth-detector-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+    width: 100%;
+  }
+  
+  .truth-detector-button:hover {
+    background-color: #2563eb;
+  }
+  
+  #truth-detector-retry {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
